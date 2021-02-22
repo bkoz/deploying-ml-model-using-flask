@@ -1,5 +1,6 @@
-# deploying-ml-model-using-flask
-Deploying Machine Learning Project on Youtube Spam comment Detector Using Flask
+# Deploying a simple ml model using flask on OpenShift
+
+Deploying a Youtube Spam comment Detector
 
 ## Deploying on OpenShift4
 
