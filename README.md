@@ -12,6 +12,7 @@ The OpenShift build will take a few minutes.
 
 ```
 $ oc expose service deploying-ml-model-using-flask
+$ oc get routes --output=custom-columns=HOST/PORT:.spec.host --no-headers
 ```
 
 Visit the route using a web browser.
@@ -19,6 +20,6 @@ Visit the route using a web browser.
 Tests using `curl`
 
 ```
-$ curl -d comment="You've won" -X POST http://127.0.0.1:5000/predict
-$ curl -d comment="Bob" -X POST http://127.0.0.1:5000/predict
+$ curl -d comment="You've won" -X POST ${route}/predict
+$ curl -d comment="Good" -X POST http://${route}/predict
 ```
