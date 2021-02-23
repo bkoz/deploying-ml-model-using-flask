@@ -1,4 +1,4 @@
-# Deploying a simple ml model using flask on OpenShift
+# Deploying a simple sklearn model using flask on OpenShift
 
 Deploying a Youtube Spam comment Detector
 
