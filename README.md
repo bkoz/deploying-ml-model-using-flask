@@ -68,6 +68,9 @@ Expected output
 ```
 $ curl -d comment="Good" -X POST ${route}/predict
 ```
+
+Expected output
+
 ```
 <!DOCTYPE html>
 <html>
