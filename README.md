@@ -33,11 +33,11 @@ $ oc expose service deploying-ml-model-using-flask
 $ oc get routes --output=custom-columns=HOST/PORT:.spec.host --no-headers
 ```
 
-Visit the route using a web browser.
+Visit the route using a web browser and make a prediction.
 
 Tests using `curl`
 
 ```
 $ curl -d comment="You've won" -X POST ${route}/predict
-$ curl -d comment="Good" -X POST http://${route}/predict
+$ curl -d comment="Good" -X POST ${route}/predict
 ```
