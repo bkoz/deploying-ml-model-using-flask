@@ -4,7 +4,8 @@ Deploying a Youtube Spam comment Detector
 
 ## Deploying on OpenShift4
 
-Create a [developer sandbox account](https://developers.redhat.com/developer-sandbox).
+Create a [developer sandbox account](https://developers.redhat.com/developer-sandbox), login to OpenShift and
+create a new application.
 
 ```
 $ oc login https://api.sandbox.xxxx.p1.openshiftapps.com:6443
