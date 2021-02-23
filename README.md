@@ -1,8 +1,8 @@
-# Deploying a simple sklearn model using flask on OpenShift
+# Deploy a simple sklearn model using flask on OpenShift
 
-Deploying a Youtube Spam comment Detector
+## A Youtube spam comment detector
 
-## Deploying on OpenShift4
+### Deploying on OpenShift4
 
 Create a [developer sandbox account](https://developers.redhat.com/developer-sandbox), login to OpenShift and
 create a new application using the python builder image.
