@@ -6,10 +6,19 @@ Deploying a Youtube Spam comment Detector
 
 ```
 $ oc login https://openshift.api.cluster.mydomain.com:6443
+$ oc new-project my-predictor
 $ oc new-app python~https://github.com/bkoz/deploying-ml-model-using-flask.git
 ```
 
-The OpenShift build will take a few minutes.
+The OpenShift build will take a few minutes then it can be exposed to external traffic.
+
+Watch the build.
+
+```
+$ oc logs bc/deploying-ml-model-using-flask --follow
+```
+
+Expose the service and visit the route.
 
 ```
 $ oc expose service deploying-ml-model-using-flask
