@@ -21,6 +21,8 @@ Wait for the build to finish.
 $ oc logs bc/deploying-ml-model-using-flask --follow
 
 ...
+...
+...
 Writing manifest to image destination
 Storing signatures
 Successfully pushed image-registry.openshift-image-registry.svc:5000/mylogin-dev/deploying-ml-model-using-flask@sha256:bcbf158dac0c48cf0e69a24c4686e9fa676fc2d39cb2711a4421e03029f6e083
@@ -40,5 +42,49 @@ Tests using `curl`
 
 ```
 $ curl -d comment="You've won" -X POST ${route}/predict
+```
+
+Expected output
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+</head>
+<body>
+	<div class="bg-info" align="center">
+	<h2>Results</h2>
+	</div>
+	<div align="center">
+
+		<h2 class="text-danger">Spam</h2>
+
+	</div>
+</body>
+</html>
+```
+```
 $ curl -d comment="Good" -X POST ${route}/predict
+```
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+</head>
+<body>
+	<div class="bg-info" align="center">
+	<h2>Results</h2>
+	</div>
+	<div align="center">
+
+		<h2 class="text-success">Not a Spam (It is Ham)</h2>
+
+	</div>
+</body>
+</html>
 ```
